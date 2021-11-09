@@ -1,16 +1,24 @@
-# This is a sample Python script.
+import sys
+import importlib
+from TK_1 import input_data
+from TK_2 import tuple_minmax
+from TK_3 import divide_by_avg
+from TK-4 import multiply_by_avg
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+def main():
+    count = int(input("Enter count data: "))
+    list_data = input_data(count)
+    print("DATA: ", list_data)
+    min_max = tuple_minmax(list_data)
+    print("Min and Max of DATA: ", min_max)
+    new_list = divide_by_avg(list_data)
+    print("Each element is divided by average:", new_list)
+    new_list1 = multiply_by_avg(list_data)
+    print("Each element is multiplied by average:", new_list1)
+    module = importlib.import_module("TK-5")
+    new_list2 = module.square_root(list_data)
+    print("Square root of each element:", new_list2)
+    return 0
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+if __name__ == "__main__":
+    sys.exit(main())
