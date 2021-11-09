@@ -3,7 +3,7 @@ import importlib
 from TK_1 import input_data
 from TK_2 import tuple_minmax
 from TK_3 import divide_by_avg
-from TK-4 import multiply_by_avg
+from TK_4 import multiply_by_avg
 
 def main():
     count = int(input("Enter count data: "))
